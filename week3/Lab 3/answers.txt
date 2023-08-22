@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: It takes longer than sort3 when sorting "reversed50000.txt". When values are reversed, it's the worst situation for bubble sort.
+
+sort2 uses: merge sort
+
+How do you know?: It takes the obviously least time when sorting the random values file "random50000.txt". The more numbers, the fast merge sort looks like.
+
+sort3 uses: selection sort
+
+How do you know?: Only selection sort left.
