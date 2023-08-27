@@ -1,0 +1,5 @@
+Energy may indicate activity level of music. High energy level may indicate a preference for music like rock.
+Valence measures the positivity or negativity.
+Danceability indicates the rythm.
+
+One year may not enough to calculate a user's audio aura. A user's preferences vary all the time. So consider a longer timeframe would be better.
