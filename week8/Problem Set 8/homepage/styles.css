@@ -1,0 +1,25 @@
+body{
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.card{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+img.rounded-circle{
+    scale: 0.8;
+}
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    height: 100%;
+}
+blockquote {
+    font-size: small;
+    margin: 0;
+    padding: .5rem .9375rem;
+    border-left: .25rem solid #ddd;
+    color: #555
+}
