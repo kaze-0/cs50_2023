@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('.response1').innerHTML = 'Correct!';
+                });
+
+                let incorrect = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector('.response1').innerHTML = 'Incorrect.';
+                    });
+                }
+
+                let submit = document.querySelector('.submit');
+                submit.addEventListener('click', function() {
+                    let answer = document.querySelector('.answer');
+                    if (answer.value == '4') {
+                        answer.style.backgroundColor = 'green';
+                        document.querySelector('.response2').innerHTML = 'Correct!';
+                    } else {
+                        answer.style.backgroundColor = 'red';
+                        document.querySelector('.response2').innerHTML = 'Incorrect.';
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <h3>
+                    1 + 2 = ?
+                </h3>
+
+                <button type="button" class = "incorrect">0</button>
+                <button type="button" class = "incorrect">1</button>
+                <button type="button" class = "incorrect">2</button>
+                <button type="button" class = "correct">3</button>
+                <button type="button" class = "incorrect">4</button>
+
+                <p class = "response1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                    <h3>2 x 2 = ?</h3>
+
+                    <input type="text" class="answer">
+                    <button type="button" class="submit">submit</button>
+
+                    <p class = "response2"></p>
+
+            </div>
+        </div>
+    </body>
+</html>
