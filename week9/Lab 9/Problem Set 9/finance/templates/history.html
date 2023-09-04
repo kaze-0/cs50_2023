@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">Transacted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in lists%}
+            <tr>
+                <td class="text-start">{{data["symbol"]}}</td>
+                <td class="text-end">{{data["shares"]}}</td>
+                <td class="text-end">{{usd(lookup(data["symbol"])["price"])}}</td>
+                <td class="text-end">{{data["transacted"]}}</td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+{% endblock %}

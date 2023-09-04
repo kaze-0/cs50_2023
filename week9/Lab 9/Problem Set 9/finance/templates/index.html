@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Portfolio
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-start">Name</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">TOTAL</th>
+        </tr>
+    </thead>
+   <tbody>
+            {% for dictionary in stat: %}
+
+            <tr>
+                <td class="text-start">{{dictionary['symbol']}}</td>
+                <td class="text-start">{{dictionary['symbol']}}</td>
+                <td class="text-end">{{dictionary['shares']}}</td>
+                <td class="text-end">{{usd(lookup(dictionary['symbol'])["price"])}}</td>
+                <td class="text-end">{{usd(dictionary['total'])}}</td>
+            </tr>
+
+            {% endfor %}
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+            <td class="border-0 text-end">{{usd(cash)}}</td>
+        </tr>
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+
+            <td class="border-0 w-bold text-end">{{usd(total)}}</td>
+        </tr>
+    </tfoot>
+</table>
+{% endblock %}
